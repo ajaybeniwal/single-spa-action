@@ -27,12 +27,6 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: echo helloworld
-    - name: Echo Github SHA version
-      run: |
-        echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
-        cd build
-        ls
-        echo "creating json files for the project"
     - name: Single Spa application parse application and package name
       id: parseapplication
       uses: ajaybeniwal/parse-application-name-package-action@v1.0
@@ -43,4 +37,14 @@ jobs:
         echo "The mfename was ${{ steps.parseapplication.outputs.mfename }}"
         echo "The mfename was ${{ steps.parseapplication.outputs.servicename }}"
         echo "/microfrontends/${{ steps.parseapplication.outputs.product }}/${{ steps.parseapplication.outputs.mfename }}/$GITHUB_SHA/bundle.js"
+    - name: Clone another repo
+      uses: actions/checkout@v2
+      with:
+        repository: ajaybeniwal/clone-action-repo@master
+        path: ./CloneRepo
+    - name: Echo The Build folder
+      run: |
+        echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
+        ls
+        echo "creating json files for the project"
         
