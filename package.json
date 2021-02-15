@@ -1,5 +1,5 @@
 {
-  "name": "single-spa-action",
+  "name": "@console/utlity",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
