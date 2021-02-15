@@ -36,4 +36,6 @@ jobs:
     - name: Single Spa application parse application and package name
       id: parseapplication
       uses: ajaybeniwal/parse-application-name-package-action
+      with:
+        who-to-greet: 'Mona the Octocat'
         
