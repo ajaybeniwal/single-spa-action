@@ -38,5 +38,8 @@ jobs:
       uses: ajaybeniwal/parse-application-name-package-action@v1.0
     # Use the output from the `hello` step
     - name: Get the output time
-      run: echo "The time was ${{ steps.parseapplication.outputs.product }}"
+      run: |
+        echo "The product was ${{ steps.parseapplication.outputs.product }}"
+        echo "The mfename was ${{ steps.parseapplication.outputs.mfename }}"
+        echo "/microfrontends/${{ steps.parseapplication.outputs.product }}/${{ steps.parseapplication.outputs.mfename }}/$GITHUB_SHA/bundle.js"
         
