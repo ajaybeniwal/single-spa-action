@@ -27,5 +27,5 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: echo helloworld
-    - run: echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is GITHUB_SHA"
+    - run: echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
     
