@@ -1,4 +1,4 @@
-# Getting Started with Create React App to test actions1
+# Getting Started with Create React App to test actions
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
