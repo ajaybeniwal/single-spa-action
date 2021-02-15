@@ -28,5 +28,8 @@ jobs:
     - run: npm test
     - run: echo helloworld
     - name: Echo Github SHA version
-      run: echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
-    
+      run: |
+        echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
+        cd build
+        ls
+        echo "creating json files for the project"
