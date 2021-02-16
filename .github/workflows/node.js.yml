@@ -46,6 +46,7 @@ jobs:
     - name: Echo The Build folder
       run: |
         echo "the commimit hash of this build is $GITHUB_RUN_ID and the sha is $GITHUB_SHA"
+        cd CloneRepo
         ls
         echo "creating json files for the project"
         
