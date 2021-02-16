@@ -40,7 +40,8 @@ jobs:
     - name: Clone another repo
       uses: actions/checkout@v2
       with:
-        repository: ajaybeniwal/clone-action-repo@master
+        repository: ajaybeniwal/clone-action-repo
+        ref: "master"
         path: ./CloneRepo
     - name: Echo The Build folder
       run: |
